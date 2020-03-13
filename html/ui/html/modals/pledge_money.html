@@ -1,0 +1,73 @@
+<div class="modal fade" id="pledge_money_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-700">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" data-i18n="pledge_burst">Pledge LTG</h4> Available Balance: <span id="account_balance"></span>
+            </div>
+            <div class="modal-body">
+                <div class="ordinary">
+                    <form role="form" autocomplete="off">
+                        <div class="callout callout-danger error_message" style="display:none"></div>
+                        <!--<div class="form-group">-->
+                            <!--<label for="request_burst_recipient_response" data-i18n="recipient">RECIPIENT</label>-->
+                            <!--<input type="text" class="form-control" name="recipient" id="request_burst_recipient_response" placeholder="Recipient Account" data-i18n="[placeholder]recipient_account" autofocus tabindex="1" />-->
+                        <!--</div>-->
+                        <div class="form-group">
+                            <label for="pledgeObj" data-i18n="recipient">RECIPIENT</label>
+                            <input type="text" class="form-control" value="LTG-XW2X-Y9LV-G5TB-3A7JA" name="recipient" id="pledgeObj" placeholder="LTG-XW2X-Y9LV-G5TB-3A7JA" disabled/>
+                        </div>
+                        <div class="form-group">
+                            <label for="multi-out-same-amount" data-i18n="amount">AMOUNT</label>
+                            <div class="input-group" id="request_burst_amount_div">
+                                <input type="text" name="amountNXT" id="multi-out-same-amount" step="any" min="0.00000001" class="form-control" placeholder="Amount" data-i18n="[placeholder]amount"  tabindex="1">
+                                <span class="input-group-addon">LTG</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group padding-left-5 padding-right-5 secret_phrase">
+                                    <label for="apply_redemption_money_password" data-i18n="passphrase">PASSPHRASE</label>
+                                    <input type="password" name="secretPhrase" id="apply_redemption_money_password" class="form-control" placeholder="" tabindex="8" autocomplete="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="callout account_info" style="display:none;margin-bottom: 0;"></div>
+                        <input type="hidden" name="request_type" value="sendMoney" data-default="sendMoney" />
+                        <input type="hidden" name="converted_account_id" value="" />
+                        <input type="hidden" name="merchant_info" value="" data-default="" />
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer ordinary" style="margin-top:0;">
+                <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="cancel">Cancel</button>
+                <button type="button" class="btn btn-confirm" id="pledge-multi-out-submit" data-loading-text="Submitting..." data-i18n="pledge_burst;[data-loading-text]submitting">Pledge LTG</button>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .btn-confirm {
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #2e6da4;
+    }
+    .btn-confirm:hover {
+        color: #fff;
+        background-color: #204d74;
+        border-color: #122b40;
+    }
+    .btn-confirm.active, .btn-confirm:active, .open>.dropdown-toggle.btn-confirm {
+        background-image: none;
+    }
+    .btn-confirm.active, .btn-confirm:active, .open>.dropdown-toggle.btn-confirm {
+        color: #fff;
+        background-color: #286090;
+        border-color: #204d74;
+    }
+    .btn-confirm:hover {
+        color: #fff;
+        background-color: #286090;
+        border-color: #204d74;
+    }
+</style>

@@ -1,0 +1,68 @@
+<div class="modal fade" id="applyRedemption_money_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-700">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" data-i18n="applyRedemption_burst">Apply Redemption LTG</h4>
+                <span class="color-red" data-i18n="redemption_tip">赎回后不能挖矿</span>
+            </div>
+            <div class="modal-body">
+                <div class="ordinary">
+                    <form role="form" autocomplete="off">
+                        <div class="callout callout-danger error_message" style="display:none"></div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group padding-left-5 padding-right-5 secret_phrase">
+                                    <label for="send_money_amountNQT" data-i18n="amount">amount</label>
+                                    <input type="text" name="amountNQT" id="send_money_amountNQT" class="form-control" placeholder="" tabindex="8" autocomplete="">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group padding-left-5 padding-right-5 secret_phrase">
+                                    <label for="send_money_password" data-i18n="passphrase">PASSPHRASE</label>
+                                    <input type="password" name="secretPhrase" id="send_money_password" class="form-control" placeholder="" tabindex="8" autocomplete="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="callout account_info" style="display:none;margin-bottom: 0;"></div>
+                        <input type="hidden" name="request_type" value="sendMoney" data-default="sendMoney" />
+                        <input type="hidden" name="converted_account_id" value="" />
+                        <input type="hidden" name="merchant_info" value="" data-default="" />
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer ordinary" style="margin-top:0;">
+                <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="cancel">Cancel</button>
+                <button type="button" class="btn btn-confirm" id="apply-redemption" data-loading-text="Submitting..." data-i18n="applyRedemption_burst;[data-loading-text]submitting">Apply Redemption LTG</button>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .btn-confirm {
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #2e6da4;
+    }
+    .btn-confirm:hover {
+        color: #fff;
+        background-color: #204d74;
+        border-color: #122b40;
+    }
+    .btn-confirm.active, .btn-confirm:active, .open>.dropdown-toggle.btn-confirm {
+        background-image: none;
+    }
+    .btn-confirm.active, .btn-confirm:active, .open>.dropdown-toggle.btn-confirm {
+        color: #fff;
+        background-color: #286090;
+        border-color: #204d74;
+    }
+    .btn-confirm:hover {
+        color: #fff;
+        background-color: #286090;
+        border-color: #204d74;
+    }
+    .color-red{
+        color: red;
+    }
+</style>

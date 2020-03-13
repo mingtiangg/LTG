@@ -1,0 +1,134 @@
+<div id="settings_page" class="page">
+  <section class="content-header">
+    <h1 data-i18n="settings">Settings</h1>
+  </section>
+  <section class="content" id="settings_box">
+    <!--              <style type="text/css">
+      /*form.settings_form > .form-group > .control-label { width: 120px; }*/
+      </style> -->
+    <div class="box box-primary">
+      <div class="box-header">
+        <h3 class="box-title" data-i18n="general">General</h3>
+      </div>
+      <form role="form" autocomplete="off">
+        <div class="box-body">
+          <div class="form-group">
+            <label for="settings_language" data-i18n="language">Language</label>  
+            <select name="language" id="settings_language" class="form-control" style="width:200px">
+              <option value="en">English (Default)</option><!-- english -->
+              <!--<option value="bg">Български</option>&lt;!&ndash; bulgarian &ndash;&gt;-->
+              <!--<option value="ca">Català</option>&lt;!&ndash; catalan &ndash;&gt;-->
+              <!--<option value="cs">Čeština</option>&lt;!&ndash; czech &ndash;&gt;-->
+              <!--<option value="de-de">Deutsch</option>&lt;!&ndash; german &ndash;&gt;-->
+              <!--<option value="el">Ελληνικά</option>&lt;!&ndash; greek &ndash;&gt;-->
+              <!--<option value="es-es">Español</option>&lt;!&ndash; spanish &ndash;&gt;-->
+              <!--<option value="fi">Suomi</option>&lt;!&ndash; finnish &ndash;&gt;-->
+              <!--<option value="fr">Français</option>&lt;!&ndash; french &ndash;&gt;-->
+              <!--<option value="gl">Galego</option>&lt;!&ndash; galician &ndash;&gt;-->
+              <!--<option value="hi">हिंदी</option>&lt;!&ndash; hindi &ndash;&gt;-->
+              <!--<option value="hr">Hrvatski</option>&lt;!&ndash; croatian &ndash;&gt;-->
+              <!--<option value="id">Bahasa Indonesia</option>&lt;!&ndash; indonesian &ndash;&gt;-->
+              <!--<option value="it">Italiano</option>&lt;!&ndash; italian &ndash;&gt;-->
+              <!--<option value="ja">日本語</option>&lt;!&ndash; japanese &ndash;&gt;-->
+              <!--<option value="lt">Lietuviškai</option>&lt;!&ndash; lithuanian &ndash;&gt;-->
+              <!--<option value="nl">Nederlands</option>&lt;!&ndash; dutch &ndash;&gt;-->
+              <!--<option value="sh">Hrvatski</option>&lt;!&ndash; croatian &ndash;&gt;-->
+              <!--<option value="sk">Slovensky</option>&lt;!&ndash; slovakian &ndash;&gt;-->
+              <!--<option value="pt-pt">Português (Portugal)</option>&lt;!&ndash; portugese &ndash;&gt;-->
+              <!--<option value="pt-br">Português (Brazil)</option>&lt;!&ndash; portugese &ndash;&gt;-->
+              <!--<option value="sr">Српски</option>&lt;!&ndash; serbian, cyrillic &ndash;&gt;-->
+              <!--<option value="sr-cs">Srpski</option>&lt;!&ndash; serbian, latin &ndash;&gt;-->
+              <!--<option value="tr">Türk</option>&lt;!&ndash; turkish &ndash;&gt;-->
+              <!--<option value="uk">Yкраiнска</option>&lt;!&ndash; ukranian &ndash;&gt;-->
+              <!--<option value="ro">Român</option>&lt;!&ndash; romanian &ndash;&gt;-->
+              <!--<option value="ru">Русский</option>&lt;!&ndash; russian &ndash;&gt;-->
+              <option value="zh-cn">中文 (simplified)</option><!-- chinese simplified -->
+              <!--<option value="zh-tw">中文 (traditional)</option>&lt;!&ndash; chinese traditional &ndash;&gt;-->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="settings_24_hour_format" data-i18n="use_24_hour_format">Use 24 Hour Format</label>
+            <select name="24_hour_format" id="settings_24_hour_format" class="form-control" style="width:200px">
+              <option value="1" data-i18n="yes">Yes</option>
+              <option value="0" data-i18n="no">No</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="settings_submit_on_enter" data-i18n="submit_forms_on_enter">Submit Forms on Enter</label>
+            <select name="submit_on_enter" id="settings_submit_on_enter" class="form-control" style="width:200px">
+              <option value="1" data-i18n="yes">Yes</option>
+              <option value="0" data-i18n="no">No</option>
+            </select>
+            <p class="help-block" data-i18n="submit_forms_on_enter_help">Be careful when choosing to submit forms via the enter key, submitting can't be undone.</p>
+          </div>
+         <div class="form-group">
+            <label for="settings_remember_passphrase" data-i18n="remember_passphrase_by_default">Remember Passphrase By Default</label>
+            <select name="remember_passphrase" id="settings_remember_passphrase" class="form-control" style="width:200px">
+              <option value="0" data-i18n="no">No</option>
+              <option value="1" data-i18n="yes">Yes</option>
+            </select>
+            <p class="help-block" data-i18n="remember_passphrase_by_default_help">On the login screen.</p>
+          </div>
+          <div class="form-group">
+            <label for="settings_news" data-i18n="enable_news_section">Enable News Section</label>
+            <select name="news" id="settings_news" class="form-control" style="width:200px">
+              <option value="-1" id="settings_news_initial" data-i18n="choose">Choose</option>
+              <option value="1" data-i18n="yes">Yes</option>
+              <option value="0" data-i18n="no">No</option>
+            </select>
+          </div>
+          <div class="form-group" id="settings_console_log_div">
+            <label for="settings_console_log" data-i18n="show_console_log_button">Show Console Log Button</label>
+            <select name="console_log" id="settings_console_log" class="form-control" style="width:200px">
+              <option value="1" data-i18n="yes">Yes</option>
+              <option value="0" data-i18n="no">No</option>
+            </select>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="box box-warning" id="settings_box">
+      <div class="box-header">
+        <h3 class="box-title" data-i18n="form_warnings">Form Warnings</h3>
+      </div>
+      <form role="form" autocomplete="off">
+        <div class="box-body" style="padding-top:0;">
+          <p class="help-block" data-i18n="form_warnings_help">Show a warning when an amount / fee entered is higher than specified below.</p>
+          <div class="form-group">
+            <label for="settings_amount_warning" data-i18n="max_amount_warning">Max Amount Warning</label>
+            <div class="input-group" style="width:200px">
+              <input type="text" name="amount_warning" id="settings_amount_warning" class="form-control" />
+              <span class="input-group-addon">LTG</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="settings_fee_warning" data-i18n="max_fee_warning">Max Fee Warning</label>
+            <div class="input-group" style="width:200px">
+              <input type="text" name="fee_warning" id="settings_fee_warning" class="form-control" />
+              <span class="input-group-addon">LTG</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="settings_asset_transfer_warning" data-i18n="max_asset_transfer_warning">Max Asset Transfer Warning</label>
+            <div class="input-group" style="width:200px">
+              <input type="text" name="asset_transfer_warning" id="settings_asset_transfer_warning" class="form-control" />
+              <span class="input-group-addon">QNT</span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="box box-success" style="overflow:visible">
+      <div class="box-header">
+        <h3 class="box-title" data-i18n="theme_settings">Theme Settings</h3>
+      </div>
+      <form role="form" autocomplete="off">
+        <div class="box-body">
+		<div class="theme-settings" id="themebox"></div></div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
